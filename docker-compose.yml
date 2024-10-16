@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  todo-app:
+    build:
+      context: .
+      dockerfile: Dockerfile  # Adjust if your Dockerfile has a different name
+    ports:
+      - "8000:8000"
+    command: python manage.py runserver 0.0.0.0:8000  # Command to run your app
+
